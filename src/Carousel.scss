@@ -1,0 +1,61 @@
+.carousel {
+  .button {
+    cursor: pointer;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+  }
+
+  &-item {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &-enter {
+      transform: translateX(100%);
+    }
+
+    &-enter-active {
+      transform: translateX(0%);
+      transition: transform 1000ms ease-in-out;
+    }
+    &-exit {
+      transform: translateX(0%);
+    }
+
+    &-exit-active {
+      transform: translateX(-100%);
+      transition: transform 1000ms ease-in-out;
+    }
+  }
+
+  .back {
+    .carousel-item {
+
+      &-enter {
+        transform: translateX(-100%);
+      }
+
+      &-enter-active {
+        transform: translateX(0%);
+        transition: transform 1000ms ease-in-out;
+      }
+
+      &-exit {
+        transform: translateX(0%);
+      }
+
+      &-exit-active {
+        transform: translateX(100%);
+        transition: transform 1000ms ease-in-out;
+      }
+    }
+  }
+
+}
+
+
